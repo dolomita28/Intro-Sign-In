@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/dolomita28/Intro-Sign-In
-- Live Site URL: https://dolomita28.github.io/intro-sign-in/
+- Live Site URL: https://dolomita28.github.io/Intro-Sign-In/
 
 ## My process
 
