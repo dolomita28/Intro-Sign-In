@@ -1,0 +1,205 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+:root {
+    --Red: hsl(0, 100%, 74%) ;
+    --Red2: hsl(0, 100%, 78%) ;
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --Dark-Blue: hsl(249, 10%, 26%) ;
+    --Grayish-Blue: hsl(246, 25%, 77%);
+    --White: #fff;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../images/bg-intro-desktop.png),linear-gradient(to bottom, var(--Red), var(--Red2));
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main{
+    display: flex;
+    height: 100vh;
+    width: 80vw;
+    align-items: center;
+}
+
+.left-side{
+ width: 50%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+h1{
+    color: var(--White);
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1;
+}
+.desc{
+    color: var(--White);
+    font-size: 1.7rem;
+    font-weight: 300;
+    margin-top:5rem;
+}
+.right-side{
+    height: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.head{
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    border-radius: 1rem;
+    background-color: var(--Blue);
+    margin-bottom: 3rem;
+}
+.head-title, .head-desc{
+    font-size:1.6rem;
+    color: var(--White);
+    font-weight: 500;
+}
+.head-desc{
+    color: var(--Grayish-Blue);
+    font-weight: 300;
+}
+.form-container{
+    width: 85%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--White);
+    border-radius: 1rem;
+}
+.form-input, .form-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-input{
+    padding: 1rem 0;
+}
+.form-field{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.field {
+    width: 80%;
+    height: 5rem;
+    border-radius: 1rem;
+    border: 1px solid #c5c5c5;
+    padding-left: 2rem;
+    color: var(--Dark-Blue);
+}
+.field::placeholder{
+    padding-left: 2rem;
+    color: var(--Dark-Blue);
+    font-weight: 600;
+    opacity: 0.7;
+}
+.field:focus{
+    outline: 1px solid var(--Dark-Blue);
+    padding-left: 2rem;
+}
+.form-button{
+    justify-content: space-around;
+    height: 10rem;
+}
+.btn{
+    width: 80%;
+    border-radius: 1rem;
+    height: 5rem;
+    background-color: var(--Green);
+    color: var(--White);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover{
+    opacity: 0.7;
+}
+.btn:active{
+    opacity: 0.7;
+    box-shadow: 0 3px var(--Green);
+}
+
+.error{
+    position: absolute;
+    right:6rem;
+}
+.validator{
+    align-self: flex-end;
+    padding-top: 1rem;
+    padding-right: 5rem;
+    color: var(--Red);
+    font-style: italic;
+}
+.hidden{
+    display: none;
+}
+.terms{
+    color: var(--Grayish-Blue);
+    font-weight: 700;
+}
+.red{
+    color:var(--Red);
+    font-weight: 700;
+}
+
+.attribution { font-size: 11px; text-align: center; color:var(--Dark-Blue)}
+.attribution a { color: var(--White) }
+
+  /* RESPONSIVE */
+   @media only screen and (max-width:650px) { 
+       body{
+           justify-content: space-around;
+           height: auto;
+       }
+       main{
+           flex-direction: column;
+           width: 90vw;
+           height: auto;
+           justify-content: space-around;
+       }
+       .left-side,.right-side,.form-container,.head{
+           width: 100%;
+       }
+       h1{
+           font-size: 3rem;
+           text-align: center;
+       }
+       .desc, .head-title, .terms{
+           text-align: center;
+       }
+       .terms{
+           padding: 0 4rem;
+       }
+       .attribution{
+           padding-top: 5rem;
+       }
+  } 
